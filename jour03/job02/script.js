@@ -15,6 +15,7 @@ bouton.on('click', function() {
     rChildren.sort(() => Math.random() - 0.5);
     for(i = 0; i <= 6; i++) {
         $(rChildren[i]).appendTo(melangees);
+        addToRangees();
     }
     if(melangees.children().length > 0) {
         console.log(melangees.children());
@@ -22,13 +23,17 @@ bouton.on('click', function() {
     }
 });
 
-do {
-    for(i = 1; i <= 6; i++) {
-        $('#'+i).on('click', function() {
-            console.log("clicked: #" + i);
-        })
+function addToRangees() {
+    
+    if(melangees.children().length != 0) {
+        for(i = 1; i <= 0; i++) {
+            $('#'+i).on('click', function() { 
+                $('#'+i).appendTo(rangees);
+            });
+        }
     }
-} while (melangees.children().length > 0)
+}
+
 
 
 });
