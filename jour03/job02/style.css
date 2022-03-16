@@ -11,6 +11,15 @@ img:hover
 
 div
 {
-    border: 1px solid grey;
     width: fit-content;
+}
+
+#rangees
+{
+    border: 1px solid green;
+}
+
+#melangees
+{
+    border: 1px solid red;
 }
