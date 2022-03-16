@@ -4,7 +4,7 @@ correct = false;
 const KONAMI = [
     'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
     'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
-    'a', 'b' 
+    'b', 'a' 
 ];
 
 function addStyle(content) {

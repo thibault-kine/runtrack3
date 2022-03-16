@@ -1,0 +1,16 @@
+img
+{
+    transition-property: background-color;
+    transition-duration: 0.25s;
+}
+
+img:hover
+{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+div
+{
+    border: 1px solid grey;
+    width: fit-content;
+}
