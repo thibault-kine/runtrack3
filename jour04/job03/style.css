@@ -1,0 +1,14 @@
+form
+{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+#filtrer, input+label
+{
+    margin-top: 1em;
+}
