@@ -12,6 +12,19 @@
 </head>
 <body>
 
+<form id="select-by">
+    <label>Trier par: </label>
+
+    <label for="by-id">ID</label>
+    <input type="radio" name="select-by" id="by-id" value="0">
+
+    <label for="by-name">Nom</label>
+    <input type="radio" name="select-by" id="by-name" value="1">
+
+    <label for="by-type">Type</label>
+    <input type="radio" name="select-by" id="by-type" value="2">
+</form>
+
 <form id="form">
     <label for="id">ID: </label>
     <input type="number" name="id" class="field">
