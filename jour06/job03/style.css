@@ -1,0 +1,21 @@
+body
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section
+{
+    background-color: #88c1d0;
+    width: 30em;
+    height: 15em;
+    margin: 1em;
+    display: block;
+}
+
+@media screen and (max-width: 1599px) {
+    body { 
+        flex-wrap: wrap; 
+    }
+}
