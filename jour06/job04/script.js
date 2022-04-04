@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-var burger = document.getElementById("burger");
 var burgerImg = document.getElementById('burger-img');
 var nav = document.getElementById("burger-links");
 
