@@ -13,13 +13,15 @@
 </head>
 <body>
 
+<div id="melangees">
+
+</div>
+
+<div id="rangees">
+    
+</div>
+    
 <button id="button">Mélanger</button>
 
-<p style="color: red;">Mélangées</p>
-<div id="melangees"></div>
-
-<p style="color: green;">Rangées</p>
-<div id="rangees"></div>
-    
 </body>
 </html>

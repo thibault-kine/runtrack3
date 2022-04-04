@@ -1,39 +1,39 @@
 $(document).ready(function () {
 
-var melangees = $('#melangees'); // le div qui contient les images mélangées 
-var rangees   = $('#rangees'); // le div qui contient les images rangées
-var bouton    = $('#button'); // le bouton "mélanger"
-
-for(i = 1; i <= 6; i++) {
-    rangees.append(`<img src="img/arc${i}.png" id="${i}">`);
+for(var i = 1; i <= 6; i++) {
+    $('#rangees').append(`<img src='img/arc${i}.png' id='${i}'>`);
 }
 
-var rChildren = rangees.children();
-
-bouton.on('click', function() {
-    rangees.empty();
-    rChildren.sort(() => Math.random() - 0.5);
-    for(i = 0; i <= 6; i++) {
-        $(rChildren[i]).appendTo(melangees);
-        addToRangees();
-    }
-    if(melangees.children().length > 0) {
-        console.log(melangees.children());
-        var mChildren = melangees.children();
-    }
+// si le bouton #button est cliqué
+$('#button').click(function () {
+    // mélanger les éléments de la div #rangees
+    $('#rangees').children().sort(function () {
+        return Math.random() - 0.5;
+    }).appendTo($('#melangees'));
 });
 
-function addToRangees() {
-    
-    if(melangees.children().length != 0) {
-        for(i = 1; i <= 0; i++) {
-            $('#'+i).on('click', function() { 
-                $('#'+i).appendTo(rangees);
-            });
+$('#melangees').click(function () {
+    // si l'élément cliqué est un élément de la div #melangees
+    if ($(event.target).parent().attr('id') == 'melangees') {
+        // le déplacer dans la div #rangees
+        $(event.target).appendTo($('#rangees'));
+    }
+
+    // si #melangees est de nouveau vide
+    if ($('#melangees').children().length == 0) {
+        // si l'id de chaque élément de la div #rangees est dans l'ordre croissant
+        for(var i = 0; i < $('#rangees').children().length; i++) {
+            if ($('#rangees').children()[i].id != i + 1) {
+                // on a trouvé un élément qui n'est pas dans l'ordre croissant
+                alert("Vous avec perdu");
+                break;
+            }
+            else {
+                alert("Vous avez gagné");
+                break;
+            }
         }
     }
-}
-
-
-
 });
+
+})
